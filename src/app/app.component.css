@@ -1,0 +1,16 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    height: 100vh;
+    background: url("https://images.unsplash.com/photo-1504813184591-01572f98c85f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80") 50% fixed;
+    background-size: cover;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+    background: rgba(4, 40, 68, 0.85);
+}
+

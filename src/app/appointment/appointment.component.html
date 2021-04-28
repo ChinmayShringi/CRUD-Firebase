@@ -1,0 +1,38 @@
+<form [formGroup]="this.appointmentService.form">
+  <div class="container">
+<div class="row">
+  <input
+    placeholder="Customer Name"
+    formControlName="customerName"
+    type="text"
+    class="input-field col-12"
+  />
+</div>
+  <div class="row">
+  <input type="time" class="col-12" formControlName="time">
+  </div>
+<div class="row">
+  <button
+  type="button"
+    class="waves-effect waves-light btn btn-success pt-2 mt-2"
+    *ngFor="let doc of doctors"
+    (click)="addAppointment(doc)"
+  >
+    {{ doc }}
+  </button>
+</div>
+<div class="row">
+  <ul class="collection">
+    <li *ngFor="let appoint of addedDocs">
+      <span > {{ appoint }} </span>
+      <a (click)="removeAppoint(appoint)">x</a>
+    </li>
+  </ul>
+</div>
+  <div class="row">
+  <button class="waves-effect waves-light btn btn-primary" (click)="onSubmit()">
+    Submit
+  </button>
+</div>
+</div>
+</form> 
